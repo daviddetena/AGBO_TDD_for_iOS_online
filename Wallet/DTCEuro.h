@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DTCMoney.h"
 
-@interface DTCEuro : NSObject
+@interface DTCEuro : DTCMoney
 
 #pragma mark - Init
 -(id) initWithAmount:(NSInteger) amount;

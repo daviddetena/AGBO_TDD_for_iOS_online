@@ -17,6 +17,10 @@
 		59FA51531B1FB54300425B10 /* DTCDollarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FA51521B1FB54300425B10 /* DTCDollarTests.m */; };
 		59FA51561B1FB63300425B10 /* DTCDollar.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FA51551B1FB63300425B10 /* DTCDollar.m */; };
 		59FA51571B1FB63B00425B10 /* DTCDollar.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FA51551B1FB63300425B10 /* DTCDollar.m */; };
+		59FA515A1B1FBA2100425B10 /* DTCMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FA51591B1FBA2100425B10 /* DTCMoney.m */; };
+		59FA515E1B1FBC7000425B10 /* NSObject+GNUStepAddons.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FA515D1B1FBC7000425B10 /* NSObject+GNUStepAddons.m */; };
+		59FA51601B1FBF2900425B10 /* DTCMoneyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FA515F1B1FBF2900425B10 /* DTCMoneyTests.m */; };
+		59FA51611B1FBFB100425B10 /* DTCMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FA51591B1FBA2100425B10 /* DTCMoney.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,11 @@
 		59FA51521B1FB54300425B10 /* DTCDollarTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTCDollarTests.m; sourceTree = "<group>"; };
 		59FA51541B1FB63300425B10 /* DTCDollar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTCDollar.h; sourceTree = "<group>"; };
 		59FA51551B1FB63300425B10 /* DTCDollar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTCDollar.m; sourceTree = "<group>"; };
+		59FA51581B1FBA2100425B10 /* DTCMoney.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTCMoney.h; sourceTree = "<group>"; };
+		59FA51591B1FBA2100425B10 /* DTCMoney.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTCMoney.m; sourceTree = "<group>"; };
+		59FA515C1B1FBC7000425B10 /* NSObject+GNUStepAddons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GNUStepAddons.h"; sourceTree = "<group>"; };
+		59FA515D1B1FBC7000425B10 /* NSObject+GNUStepAddons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GNUStepAddons.m"; sourceTree = "<group>"; };
+		59FA515F1B1FBF2900425B10 /* DTCMoneyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTCMoneyTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +95,7 @@
 		59FA51291B1FA24D00425B10 /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
+				59FA515B1B1FBC5000425B10 /* Categories */,
 				59FA514D1B1FA5A600425B10 /* Models */,
 				59FA512E1B1FA24E00425B10 /* AppDelegate.h */,
 				59FA512F1B1FA24E00425B10 /* AppDelegate.m */,
@@ -127,6 +137,7 @@
 			children = (
 				59FA514B1B1FA46B00425B10 /* DTCEuroTests.m */,
 				59FA51521B1FB54300425B10 /* DTCDollarTests.m */,
+				59FA515F1B1FBF2900425B10 /* DTCMoneyTests.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -138,8 +149,19 @@
 				59FA514F1B1FA5C000425B10 /* DTCEuro.m */,
 				59FA51541B1FB63300425B10 /* DTCDollar.h */,
 				59FA51551B1FB63300425B10 /* DTCDollar.m */,
+				59FA51581B1FBA2100425B10 /* DTCMoney.h */,
+				59FA51591B1FBA2100425B10 /* DTCMoney.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		59FA515B1B1FBC5000425B10 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				59FA515C1B1FBC7000425B10 /* NSObject+GNUStepAddons.h */,
+				59FA515D1B1FBC7000425B10 /* NSObject+GNUStepAddons.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +265,8 @@
 			files = (
 				59FA51501B1FA5C000425B10 /* DTCEuro.m in Sources */,
 				59FA51301B1FA24E00425B10 /* AppDelegate.m in Sources */,
+				59FA515A1B1FBA2100425B10 /* DTCMoney.m in Sources */,
+				59FA515E1B1FBC7000425B10 /* NSObject+GNUStepAddons.m in Sources */,
 				59FA512D1B1FA24E00425B10 /* main.m in Sources */,
 				59FA51561B1FB63300425B10 /* DTCDollar.m in Sources */,
 			);
@@ -252,9 +276,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59FA51611B1FBFB100425B10 /* DTCMoney.m in Sources */,
 				59FA51511B1FA69100425B10 /* DTCEuro.m in Sources */,
 				59FA514C1B1FA46B00425B10 /* DTCEuroTests.m in Sources */,
 				59FA51531B1FB54300425B10 /* DTCDollarTests.m in Sources */,
+				59FA51601B1FBF2900425B10 /* DTCMoneyTests.m in Sources */,
 				59FA51571B1FB63B00425B10 /* DTCDollar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

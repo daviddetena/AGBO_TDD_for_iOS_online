@@ -1,5 +1,5 @@
 //
-//  DTCDollar.h
+//  DTCMoney.h
 //  Wallet
 //
 //  Created by David de Tena on 04/06/15.
@@ -7,14 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DTCMoney.h"
 
-@interface DTCDollar : DTCMoney
+@interface DTCMoney : NSObject
 
-#pragma mark - Init
 -(id) initWithAmount:(NSInteger) amount;
 
--(DTCDollar *) times:(NSInteger) multiplier;
-
+-(DTCMoney *) times:(NSInteger) multiplier;
 
 @end
