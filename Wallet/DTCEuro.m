@@ -31,4 +31,12 @@
     return newEuro;
 }
 
+
+#pragma mark - Overwriten
+
+// Implement the simplest way: compare the two amounts
+-(BOOL) isEqual:(id)object{
+    return [self amount]==[object amount];
+}
+
 @end

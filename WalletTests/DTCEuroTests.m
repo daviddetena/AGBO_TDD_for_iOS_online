@@ -27,4 +27,12 @@
     XCTAssertEqual(product.amount,10, @"5*2 should be 10");
 }
 
+-(void) testEquality{
+    DTCEuro *five = [[DTCEuro alloc] initWithAmount:5];
+    DTCEuro *ten = [[DTCEuro alloc] initWithAmount:10];
+    DTCEuro *total = [five times:2];
+    
+    XCTAssertEqualObjects(ten, total, @"Equivalent objects should be equal!");
+}
+
 @end
