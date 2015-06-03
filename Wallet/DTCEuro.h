@@ -10,8 +10,6 @@
 
 @interface DTCEuro : NSObject
 
-@property (nonatomic,readonly) NSInteger amount;
-
 #pragma mark - Init
 -(id) initWithAmount:(NSInteger) amount;
 
