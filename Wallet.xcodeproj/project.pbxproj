@@ -11,7 +11,9 @@
 		59FA51301B1FA24E00425B10 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FA512F1B1FA24E00425B10 /* AppDelegate.m */; };
 		59FA51321B1FA24E00425B10 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59FA51311B1FA24E00425B10 /* Images.xcassets */; };
 		59FA51351B1FA24E00425B10 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59FA51331B1FA24E00425B10 /* LaunchScreen.xib */; };
-		59FA51411B1FA24E00425B10 /* WalletTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FA51401B1FA24E00425B10 /* WalletTests.m */; };
+		59FA514C1B1FA46B00425B10 /* DTCEuroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FA514B1B1FA46B00425B10 /* DTCEuroTests.m */; };
+		59FA51501B1FA5C000425B10 /* DTCEuro.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FA514F1B1FA5C000425B10 /* DTCEuro.m */; };
+		59FA51511B1FA69100425B10 /* DTCEuro.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FA514F1B1FA5C000425B10 /* DTCEuro.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +36,9 @@
 		59FA51341B1FA24E00425B10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		59FA513A1B1FA24E00425B10 /* WalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59FA513F1B1FA24E00425B10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		59FA51401B1FA24E00425B10 /* WalletTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WalletTests.m; sourceTree = "<group>"; };
+		59FA514B1B1FA46B00425B10 /* DTCEuroTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTCEuroTests.m; sourceTree = "<group>"; };
+		59FA514E1B1FA5C000425B10 /* DTCEuro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTCEuro.h; sourceTree = "<group>"; };
+		59FA514F1B1FA5C000425B10 /* DTCEuro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTCEuro.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,7 @@
 		59FA51291B1FA24D00425B10 /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
+				59FA514D1B1FA5A600425B10 /* Models */,
 				59FA512E1B1FA24E00425B10 /* AppDelegate.h */,
 				59FA512F1B1FA24E00425B10 /* AppDelegate.m */,
 				59FA51311B1FA24E00425B10 /* Images.xcassets */,
@@ -97,7 +102,7 @@
 		59FA513D1B1FA24E00425B10 /* WalletTests */ = {
 			isa = PBXGroup;
 			children = (
-				59FA51401B1FA24E00425B10 /* WalletTests.m */,
+				59FA514A1B1FA45000425B10 /* Models */,
 				59FA513E1B1FA24E00425B10 /* Supporting Files */,
 			);
 			path = WalletTests;
@@ -109,6 +114,23 @@
 				59FA513F1B1FA24E00425B10 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		59FA514A1B1FA45000425B10 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				59FA514B1B1FA46B00425B10 /* DTCEuroTests.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		59FA514D1B1FA5A600425B10 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				59FA514E1B1FA5C000425B10 /* DTCEuro.h */,
+				59FA514F1B1FA5C000425B10 /* DTCEuro.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59FA51501B1FA5C000425B10 /* DTCEuro.m in Sources */,
 				59FA51301B1FA24E00425B10 /* AppDelegate.m in Sources */,
 				59FA512D1B1FA24E00425B10 /* main.m in Sources */,
 			);
@@ -219,7 +242,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59FA51411B1FA24E00425B10 /* WalletTests.m in Sources */,
+				59FA51511B1FA69100425B10 /* DTCEuro.m in Sources */,
+				59FA514C1B1FA46B00425B10 /* DTCEuroTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
