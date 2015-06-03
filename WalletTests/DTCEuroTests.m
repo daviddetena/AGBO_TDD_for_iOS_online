@@ -22,9 +22,9 @@
     // incluyendo código ideal de clases que
     // aún no tenemos
     DTCEuro *euro = [[DTCEuro alloc] initWithAmount:5];
-    [euro times:2];
+    DTCEuro *product = [euro times:2];
     
-    XCTAssertEqual(euro.amount,10, @"5*2 should be 10");
+    XCTAssertEqual(product.amount,10, @"5*2 should be 10");
 }
 
 @end

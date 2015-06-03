@@ -15,6 +15,6 @@
 #pragma mark - Init
 -(id) initWithAmount:(NSInteger) amount;
 
--(void) times:(NSInteger) multiplier;
+-(DTCEuro *) times:(NSInteger) multiplier;
 
 @end
