@@ -14,6 +14,9 @@
 		59FA514C1B1FA46B00425B10 /* DTCEuroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FA514B1B1FA46B00425B10 /* DTCEuroTests.m */; };
 		59FA51501B1FA5C000425B10 /* DTCEuro.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FA514F1B1FA5C000425B10 /* DTCEuro.m */; };
 		59FA51511B1FA69100425B10 /* DTCEuro.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FA514F1B1FA5C000425B10 /* DTCEuro.m */; };
+		59FA51531B1FB54300425B10 /* DTCDollarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FA51521B1FB54300425B10 /* DTCDollarTests.m */; };
+		59FA51561B1FB63300425B10 /* DTCDollar.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FA51551B1FB63300425B10 /* DTCDollar.m */; };
+		59FA51571B1FB63B00425B10 /* DTCDollar.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FA51551B1FB63300425B10 /* DTCDollar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,9 @@
 		59FA514B1B1FA46B00425B10 /* DTCEuroTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTCEuroTests.m; sourceTree = "<group>"; };
 		59FA514E1B1FA5C000425B10 /* DTCEuro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTCEuro.h; sourceTree = "<group>"; };
 		59FA514F1B1FA5C000425B10 /* DTCEuro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTCEuro.m; sourceTree = "<group>"; };
+		59FA51521B1FB54300425B10 /* DTCDollarTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTCDollarTests.m; sourceTree = "<group>"; };
+		59FA51541B1FB63300425B10 /* DTCDollar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTCDollar.h; sourceTree = "<group>"; };
+		59FA51551B1FB63300425B10 /* DTCDollar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTCDollar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				59FA514B1B1FA46B00425B10 /* DTCEuroTests.m */,
+				59FA51521B1FB54300425B10 /* DTCDollarTests.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -129,6 +136,8 @@
 			children = (
 				59FA514E1B1FA5C000425B10 /* DTCEuro.h */,
 				59FA514F1B1FA5C000425B10 /* DTCEuro.m */,
+				59FA51541B1FB63300425B10 /* DTCDollar.h */,
+				59FA51551B1FB63300425B10 /* DTCDollar.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -235,6 +244,7 @@
 				59FA51501B1FA5C000425B10 /* DTCEuro.m in Sources */,
 				59FA51301B1FA24E00425B10 /* AppDelegate.m in Sources */,
 				59FA512D1B1FA24E00425B10 /* main.m in Sources */,
+				59FA51561B1FB63300425B10 /* DTCDollar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +254,8 @@
 			files = (
 				59FA51511B1FA69100425B10 /* DTCEuro.m in Sources */,
 				59FA514C1B1FA46B00425B10 /* DTCEuroTests.m in Sources */,
+				59FA51531B1FB54300425B10 /* DTCDollarTests.m in Sources */,
+				59FA51571B1FB63B00425B10 /* DTCDollar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
