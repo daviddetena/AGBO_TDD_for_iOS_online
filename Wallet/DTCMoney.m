@@ -5,21 +5,18 @@
 //  Created by David de Tena on 04/06/15.
 //  Copyright (c) 2015 David de Tena. All rights reserved.
 //
+//  Import @property amount from private
 
 #import "DTCMoney.h"
 #import "NSObject+GNUStepAddons.h"
+#import "DTCMoney-private.h"
 
-@interface DTCMoney()
-
-@property (nonatomic) NSInteger amount;
-
-@end
 
 @implementation DTCMoney
 
 -(id) initWithAmount:(NSInteger) amount{
     if(self = [super init]){
-        _amount = amount;
+        _amount = @(amount);
     }
     return self;
 }

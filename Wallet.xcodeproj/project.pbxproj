@@ -34,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		596CA21C1B2095F1005A4B8E /* DTCMoney-private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DTCMoney-private.h"; sourceTree = "<group>"; };
 		59FA51271B1FA24D00425B10 /* Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59FA512B1B1FA24E00425B10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59FA512C1B1FA24E00425B10 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -151,6 +152,7 @@
 				59FA51551B1FB63300425B10 /* DTCDollar.m */,
 				59FA51581B1FBA2100425B10 /* DTCMoney.h */,
 				59FA51591B1FBA2100425B10 /* DTCMoney.m */,
+				596CA21C1B2095F1005A4B8E /* DTCMoney-private.h */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -462,6 +464,7 @@
 				59FA51461B1FA24E00425B10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		59FA51471B1FA24E00425B10 /* Build configuration list for PBXNativeTarget "WalletTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +473,7 @@
 				59FA51491B1FA24E00425B10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

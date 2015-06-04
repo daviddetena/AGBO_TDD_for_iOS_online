@@ -52,4 +52,20 @@
     XCTAssertEqual([a hash], [b hash], @"Equal objects must have same hash");
 }
 
+
+- (void) testAmountStorage{
+    DTCEuro *euro = [[DTCEuro alloc] initWithAmount:2];
+    
+    // We should only test the public interface of an object
+    // The exception is for fixing bugs in private interface
+    
+    // Ask the compiler not to let us know about warnings in this method with the given selector
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+    
+    XCTAssertEqual(2,[[euro performSelector:@selector(amount)] integerValue], @"The value retrieved should be the same as the stored");
+
+#pragma clang diagnostic pop
+}
+
 @end
