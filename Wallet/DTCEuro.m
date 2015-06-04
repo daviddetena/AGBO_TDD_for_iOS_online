@@ -13,16 +13,6 @@
 
 @implementation DTCEuro
 
--(DTCEuro *) times:(NSInteger) multiplier{
-    DTCEuro *newEuro = [[DTCEuro alloc]
-                        initWithAmount:[self.amount integerValue] * multiplier];
-    return newEuro;
-}
-
-
-#pragma mark - Overwriten
-
-
 
 
 

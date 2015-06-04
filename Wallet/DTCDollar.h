@@ -11,7 +11,5 @@
 
 @interface DTCDollar : DTCMoney
 
--(DTCDollar *) times:(NSInteger) multiplier;
-
 
 @end

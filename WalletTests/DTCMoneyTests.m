@@ -16,10 +16,5 @@
 
 @implementation DTCMoneyTests
 
--(void) testThatTimesRaisesException{
-    DTCMoney *money = [[DTCMoney alloc] initWithAmount:1];
-    // Exception: this method needs to be implemented in subclasses
-    XCTAssertThrows([money times:2],@"Should raise an exception");
-}
 
 @end

@@ -8,12 +8,25 @@
 //  Import @property amount from private
 
 #import "DTCMoney.h"
+#import "DTCEuro.h"
+#import "DTCDollar.h"
 #import "NSObject+GNUStepAddons.h"
 #import "DTCMoney-private.h"
 
 
 @implementation DTCMoney
 
+#pragma mark - Factory methods
++(id) euroWithAmount:(NSInteger) amount{
+    return [[DTCEuro alloc] initWithAmount:amount];
+}
+
++(id) dollarWithAmount:(NSInteger) amount{
+    return [[DTCDollar alloc] initWithAmount:amount];
+}
+
+
+#pragma mark - Init
 -(id) initWithAmount:(NSInteger) amount{
     if(self = [super init]){
         _amount = @(amount);
@@ -21,14 +34,10 @@
     return self;
 }
 
--(DTCMoney *) times:(NSInteger) multiplier{
-    // No se debería llamar, sino que se debería
-    // de usar el de la subclase
-    
-    // _cmd es parámetro oculto que recibe todo mensaje de Obj-C
-    // y que indica el selector actual. self tb es pasado como
-    // parámetro oculto
-    return [self subclassResponsability:_cmd];
+-(id) times:(NSInteger) multiplier{
+    DTCMoney *newMoney = [[DTCMoney alloc]
+                          initWithAmount:[self.amount integerValue] * multiplier];
+    return newMoney;
 }
 
 #pragma mark - Overwritten

@@ -10,8 +10,17 @@
 
 @interface DTCMoney : NSObject
 
+#pragma mark - Factory methods
+// Replace instancetype with id so the compiler decide the
+// returned type instead of instances of DTCMoney
++(id) euroWithAmount:(NSInteger) amount;
++(id) dollarWithAmount:(NSInteger) amount;
+
 -(id) initWithAmount:(NSInteger) amount;
 
--(DTCMoney *) times:(NSInteger) multiplier;
+// Replace DTCMoney * with id so the compiler
+// returns the proper type depending on the
+// class where this method is called
+-(id) times:(NSInteger) multiplier;
 
 @end

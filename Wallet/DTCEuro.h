@@ -11,8 +11,4 @@
 
 @interface DTCEuro : DTCMoney
 
-#pragma mark - Init
-
--(DTCEuro *) times:(NSInteger) multiplier;
-
 @end

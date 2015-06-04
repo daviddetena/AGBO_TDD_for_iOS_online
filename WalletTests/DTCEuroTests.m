@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 #import "DTCEuro.h"
+#import "DTCMoney.h"
 
 @interface DTCEuroTests : XCTestCase
 
@@ -21,16 +22,16 @@
     // Escribimos "la carta a los Reyes Magos",
     // incluyendo código ideal de clases que
     // aún no tenemos
-    DTCEuro *euro = [[DTCEuro alloc] initWithAmount:5];
-    DTCEuro *ten = [[DTCEuro alloc] initWithAmount:10];
+    DTCEuro *euro = [DTCMoney euroWithAmount:5];
+    DTCEuro *ten = [DTCMoney euroWithAmount:10];
     DTCEuro *product = [euro times:2];
     
     XCTAssertEqualObjects(product,ten,@"€5 * 2 should be €10");
 }
 
 -(void) testEquality{
-    DTCEuro *five = [[DTCEuro alloc] initWithAmount:5];
-    DTCEuro *ten = [[DTCEuro alloc] initWithAmount:10];
+    DTCEuro *five = [DTCMoney euroWithAmount:5];
+    DTCEuro *ten = [DTCMoney euroWithAmount:10];
     DTCEuro *total = [five times:2];
     
     XCTAssertEqualObjects(ten, total, @"Equivalent objects should be equal!");
@@ -45,8 +46,8 @@
  */
 -(void) testHash{
     // a y b serán iguales porque tengo el testEquality que lo comprueba
-    DTCEuro *a = [[DTCEuro alloc] initWithAmount:2];
-    DTCEuro *b = [[DTCEuro alloc] initWithAmount:2];
+    DTCEuro *a = [DTCMoney euroWithAmount:2];
+    DTCEuro *b = [DTCMoney euroWithAmount:2];
     
     // método hash: devuelve un entero largo sin signo
     XCTAssertEqual([a hash], [b hash], @"Equal objects must have same hash");
@@ -54,7 +55,7 @@
 
 
 - (void) testAmountStorage{
-    DTCEuro *euro = [[DTCEuro alloc] initWithAmount:2];
+    DTCEuro *euro = [DTCMoney euroWithAmount:2];
     
     // We should only test the public interface of an object
     // The exception is for fixing bugs in private interface
