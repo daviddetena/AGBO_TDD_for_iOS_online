@@ -10,13 +10,17 @@
 
 @interface DTCMoney : NSObject
 
+#pragma mark - Properties
+@property (nonatomic,readonly) NSString *currency;
+
 #pragma mark - Factory methods
 // Replace instancetype with id so the compiler decide the
 // returned type instead of instances of DTCMoney
 +(id) euroWithAmount:(NSInteger) amount;
 +(id) dollarWithAmount:(NSInteger) amount;
 
--(id) initWithAmount:(NSInteger) amount;
+-(id) initWithAmount:(NSInteger) amount
+            currency:(NSString *) currency;
 
 // Replace DTCMoney * with id so the compiler
 // returns the proper type depending on the

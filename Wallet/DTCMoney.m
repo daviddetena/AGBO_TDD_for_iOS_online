@@ -8,35 +8,37 @@
 //  Import @property amount from private
 
 #import "DTCMoney.h"
-#import "DTCEuro.h"
-#import "DTCDollar.h"
 #import "NSObject+GNUStepAddons.h"
-#import "DTCMoney-private.h"
 
+@interface DTCMoney()
+@property (nonatomic,strong) NSNumber *amount;
+@end
 
 @implementation DTCMoney
 
 #pragma mark - Factory methods
 +(id) euroWithAmount:(NSInteger) amount{
-    return [[DTCEuro alloc] initWithAmount:amount];
+    return [[DTCMoney alloc] initWithAmount:amount currency:@"EUR"];
 }
 
 +(id) dollarWithAmount:(NSInteger) amount{
-    return [[DTCDollar alloc] initWithAmount:amount];
+    return [[DTCMoney alloc] initWithAmount:amount currency:@"USD"];
 }
 
 
 #pragma mark - Init
--(id) initWithAmount:(NSInteger) amount{
+-(id) initWithAmount:(NSInteger) amount
+            currency:(NSString *) currency{
     if(self = [super init]){
         _amount = @(amount);
+        _currency = currency;
     }
     return self;
 }
 
 -(id) times:(NSInteger) multiplier{
     DTCMoney *newMoney = [[DTCMoney alloc]
-                          initWithAmount:[self.amount integerValue] * multiplier];
+                          initWithAmount:[self.amount integerValue] * multiplier currency:self.currency];
     return newMoney;
 }
 
