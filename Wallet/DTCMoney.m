@@ -34,4 +34,14 @@
     return [self subclassResponsability:_cmd];
 }
 
+#pragma mark - Overwritten
+/*
+    Incluimos el nombre de la clase y el valor de account en el description
+ */
+-(NSString *) description{
+    return [NSString stringWithFormat:@"<%@ %ld>",[self class], (long)[self amount]];
+}
+
+
+
 @end

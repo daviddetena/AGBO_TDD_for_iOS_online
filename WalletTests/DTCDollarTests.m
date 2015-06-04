@@ -33,4 +33,21 @@
     XCTAssertFalse([total isEqual:five], @"Non equivalent objects should not be equal");
 }
 
+
+/**
+ Hacemos test de hash. En Cocoa, cuando una clase sobreescribe el método
+ isEqual: debe sobreescribir el método hash:. El framework de Cocoa impone
+ que dos objetos que sean iguales deben tener el mismo hash; al contrario,
+ no tiene por qué darse, es decir, dos objetos con el mismo hash no tienen
+ por qué ser iguales.
+ */
+-(void) testHash{
+    // a y b serán iguales porque tengo el testEquality que lo comprueba
+    DTCDollar *a = [[DTCDollar alloc] initWithAmount:2];
+    DTCDollar *b = [[DTCDollar alloc] initWithAmount:2];
+    
+    // método hash: devuelve un entero largo sin signo
+    XCTAssertEqual([a hash], [b hash], @"Equal objects must have same hash");
+}
+
 @end

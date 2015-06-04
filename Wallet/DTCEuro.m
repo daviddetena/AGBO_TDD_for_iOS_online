@@ -39,4 +39,11 @@
     return [self amount]==[object amount];
 }
 
+
+// Hash: inherited from NSObject simply returns the object's memory address
+// as a number
+-(NSUInteger) hash{
+    return (NSUInteger)self.amount;
+}
+
 @end
