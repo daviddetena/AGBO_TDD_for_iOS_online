@@ -11,9 +11,6 @@
 
 @interface DTCDollar : DTCMoney
 
-#pragma mark - Init
--(id) initWithAmount:(NSInteger) amount;
-
 -(DTCDollar *) times:(NSInteger) multiplier;
 
 

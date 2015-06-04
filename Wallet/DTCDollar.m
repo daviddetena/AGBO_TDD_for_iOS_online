@@ -16,13 +16,7 @@
 
 @implementation DTCDollar
 
-#pragma mark - Init
--(id) initWithAmount:(NSInteger) amount{
-    if(self = [super init]){
-        _amount = amount;
-    }
-    return self;
-}
+
 
 -(DTCDollar *) times:(NSInteger) multiplier{
     DTCDollar *newDollar = [[DTCDollar alloc]
@@ -32,13 +26,6 @@
 
 #pragma mark - Overwriten
 
-// Implement the simplest way: compare the two amounts
--(BOOL) isEqual:(id)object{
-    return [self amount]==[object amount];
-}
 
--(NSUInteger) hash{
-    return (NSUInteger)self.amount;
-}
 
 @end
