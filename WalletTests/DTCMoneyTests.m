@@ -44,6 +44,16 @@
     XCTAssertEqualObjects([DTCMoney dollarWithAmount:4], [[DTCMoney dollarWithAmount:2] times:2],@"Equivalent objects should be equal!");
 }
 
+
+// Check that $1 != €1
+-(void) testDifferentCurrencies{
+    DTCMoney *euro = [DTCMoney euroWithAmount:1];
+    DTCMoney *dollar = [DTCMoney dollarWithAmount:1];
+    
+    XCTAssertNotEqualObjects(euro, dollar,@"Different currencies should not be equal!");
+}
+
+
 /**
  Hacemos test de hash. En Cocoa, cuando una clase sobreescribe el método
  isEqual: debe sobreescribir el método hash:. El framework de Cocoa impone

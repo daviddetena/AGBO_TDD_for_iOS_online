@@ -52,8 +52,15 @@
 
 
 // Implement the simplest way: compare the two amounts
+// Improve to compare EUR and USD
 -(BOOL) isEqual:(id)object{
-    return [self amount]==[object amount];
+    if ([self.currency isEqual:[object currency]]) {
+        // Check that the two currencies are the same
+        return [self amount] == [object amount];
+    }
+    else{
+        return NO;
+    }
 }
 
 // Hash: inherited from NSObject simply returns the object's memory address
