@@ -42,6 +42,16 @@
     return newMoney;
 }
 
+// Add two objects
+-(DTCMoney *) plus:(DTCMoney *) other{
+    NSInteger totalAmount = [self.amount integerValue] + [other.amount integerValue];
+    DTCMoney *total = [[DTCMoney alloc] initWithAmount:totalAmount
+                                              currency:self.currency];
+    return total;
+}
+
+
+
 #pragma mark - Overwritten
 /*
     Incluimos el nombre de la clase y el valor de account en el description

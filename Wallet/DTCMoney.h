@@ -27,4 +27,6 @@
 // class where this method is called
 -(id) times:(NSInteger) multiplier;
 
+-(DTCMoney *) plus:(DTCMoney *) other;
+
 @end

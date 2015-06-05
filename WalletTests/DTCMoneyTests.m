@@ -90,4 +90,16 @@
 }
 
 
+// Simple test of addition
+-(void) testSimpleAddition{
+    XCTAssertEqualObjects([[DTCMoney dollarWithAmount:5] plus:
+                           [DTCMoney dollarWithAmount:5]],
+                           [DTCMoney dollarWithAmount:10],@"$5 + $5 = $10");
+}
+
+
+
+
+
+
 @end
