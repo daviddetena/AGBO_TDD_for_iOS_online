@@ -12,6 +12,8 @@
 		594BF3121B24557000E2CFD7 /* DTCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 594BF30F1B24557000E2CFD7 /* DTCViewController.xib */; };
 		594BF3131B24557000E2CFD7 /* DTCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 594BF30F1B24557000E2CFD7 /* DTCViewController.xib */; };
 		594BF3161B24559600E2CFD7 /* DTCControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 594BF3151B24559600E2CFD7 /* DTCControllerTests.m */; };
+		59EA268E1B245FD2003C0FC5 /* DTCWalletTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59EA268D1B245FD2003C0FC5 /* DTCWalletTableViewController.m */; };
+		59EA268F1B245FD2003C0FC5 /* DTCWalletTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59EA268D1B245FD2003C0FC5 /* DTCWalletTableViewController.m */; };
 		59FA512D1B1FA24E00425B10 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FA512C1B1FA24E00425B10 /* main.m */; };
 		59FA51301B1FA24E00425B10 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FA512F1B1FA24E00425B10 /* AppDelegate.m */; };
 		59FA51321B1FA24E00425B10 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59FA51311B1FA24E00425B10 /* Images.xcassets */; };
@@ -43,6 +45,8 @@
 		594BF30E1B24557000E2CFD7 /* DTCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTCViewController.m; sourceTree = "<group>"; };
 		594BF30F1B24557000E2CFD7 /* DTCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DTCViewController.xib; sourceTree = "<group>"; };
 		594BF3151B24559600E2CFD7 /* DTCControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTCControllerTests.m; sourceTree = "<group>"; };
+		59EA268C1B245FD2003C0FC5 /* DTCWalletTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTCWalletTableViewController.h; sourceTree = "<group>"; };
+		59EA268D1B245FD2003C0FC5 /* DTCWalletTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTCWalletTableViewController.m; sourceTree = "<group>"; };
 		59FA51271B1FA24D00425B10 /* Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59FA512B1B1FA24E00425B10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59FA512C1B1FA24E00425B10 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 				594BF30D1B24557000E2CFD7 /* DTCViewController.h */,
 				594BF30E1B24557000E2CFD7 /* DTCViewController.m */,
 				594BF30F1B24557000E2CFD7 /* DTCViewController.xib */,
+				59EA268C1B245FD2003C0FC5 /* DTCWalletTableViewController.h */,
+				59EA268D1B245FD2003C0FC5 /* DTCWalletTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -298,6 +304,7 @@
 				594BF3101B24557000E2CFD7 /* DTCViewController.m in Sources */,
 				59FA51301B1FA24E00425B10 /* AppDelegate.m in Sources */,
 				59FD72231B24190C00770D89 /* DTCBroker.m in Sources */,
+				59EA268E1B245FD2003C0FC5 /* DTCWalletTableViewController.m in Sources */,
 				59FA515A1B1FBA2100425B10 /* DTCMoney.m in Sources */,
 				59FA515E1B1FBC7000425B10 /* NSObject+GNUStepAddons.m in Sources */,
 				59FA512D1B1FA24E00425B10 /* main.m in Sources */,
@@ -310,6 +317,7 @@
 			files = (
 				59FD722A1B2438D800770D89 /* DTCWallet.m in Sources */,
 				594BF3161B24559600E2CFD7 /* DTCControllerTests.m in Sources */,
+				59EA268F1B245FD2003C0FC5 /* DTCWalletTableViewController.m in Sources */,
 				594BF3111B24557000E2CFD7 /* DTCViewController.m in Sources */,
 				59FD72261B24361F00770D89 /* DTCWalletTests.m in Sources */,
 				59FA51611B1FBFB100425B10 /* DTCMoney.m in Sources */,

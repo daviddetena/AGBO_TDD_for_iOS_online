@@ -9,11 +9,16 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 #import "DTCViewController.h"
+#import "DTCWallet.h"
+#import "DTCWalletTableViewController.h"
 
 @interface DTCControllerTests : XCTestCase
 @property (nonatomic,strong) DTCViewController *viewController;
 @property (nonatomic,strong) UIButton *button;
 @property (nonatomic,strong) UILabel *label;
+
+@property (nonatomic,strong) DTCWalletTableViewController *walletVC;
+@property (nonatomic,strong) DTCWallet *wallet;
 @end
 
 @implementation DTCControllerTests
@@ -28,6 +33,10 @@
 
     // Asign who the label is
     self.viewController.displayLabel = self.label;
+    
+    self.wallet = [[DTCWallet alloc] initWithAmount:1 currency:@"USD"];
+    [self.wallet plus:[DTCMoney euroWithAmount:1]];
+    self.walletVC = [[DTCWalletTableViewController alloc] initWithModel:self.wallet];
 }
 
 - (void)tearDown {
@@ -46,5 +55,22 @@
     // Check that the label and the button have the same text
     XCTAssertEqualObjects(self.button.titleLabel.text, self.label.text,@"Button and label should have the same text");
 }
+
+
+// Test sections and rows
+- (void) testThatTableHasOneSection{
+    
+    NSUInteger sections = [self.walletVC numberOfSectionsInTableView:nil];
+
+    // Number of elements per section
+    XCTAssertEqual(sections, 1, @"There can only be one section!");
+}
+
+- (void) testThatNumberOfCellsIsNumberOfMoneyPlusOne{
+    XCTAssertEqual(self.wallet.count + 1,
+                   [self.walletVC tableView:nil numberOfRowsInSection:0],
+                   @"The number of cells must be the number of moneys plus 1 (the total)");
+}
+
 
 @end

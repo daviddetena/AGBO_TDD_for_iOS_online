@@ -15,6 +15,13 @@
 
 @implementation DTCWallet
 
+#pragma mark - Getters
+
+// Returns the number of moneys in the wallet
+-(NSUInteger) count{
+    return self.moneys.count;
+}
+
 
 #pragma mark - DTCMoney protocol
 

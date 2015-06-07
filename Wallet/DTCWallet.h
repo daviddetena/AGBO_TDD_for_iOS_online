@@ -11,4 +11,6 @@
 
 @interface DTCWallet : NSObject<DTCMoney>
 
+@property (nonatomic,readonly) NSUInteger count;
+
 @end
