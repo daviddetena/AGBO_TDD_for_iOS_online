@@ -10,6 +10,7 @@
 @class DTCMoney;
 @class DTCBroker;
 
+#pragma mark - DTCMoney protocol
 @protocol DTCMoney <NSObject>
 
 -(id) initWithAmount:(NSInteger) amount
@@ -24,7 +25,10 @@
 
 -(id<DTCMoney>) plus:(DTCMoney *) other;
 
--(id<DTCMoney>) reduceToCurrency:(NSString *) currency withBroker:(DTCBroker *) broker;
+-(id<DTCMoney>) minus:(DTCMoney *) other;
+
+-(id<DTCMoney>) reduceToCurrency:(NSString *) currency
+                      withBroker:(DTCBroker *) broker;
 
 @end
 

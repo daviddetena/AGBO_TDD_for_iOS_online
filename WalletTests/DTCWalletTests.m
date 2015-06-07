@@ -45,4 +45,32 @@
     XCTAssertEqualObjects(reduced, [DTCMoney dollarWithAmount:100],@"€40 + $20 = $100, rate 2:1");
 }
 
+
+// €1 + €1 = €2
+-(void)testCountEuros {
+    
+    DTCWallet *wallet = [[DTCWallet alloc] initWithAmount:1 currency:@"EUR"];
+    
+    [wallet plus:[DTCMoney euroWithAmount:1]];
+    
+    NSInteger numberOfEuros = wallet.countEuros;
+    
+    XCTAssertEqual(numberOfEuros, 2, @"€2");
+}
+
+
+// $1 + $1 = $2
+-(void)testCountDollars {
+    
+    DTCWallet *wallet = [[DTCWallet alloc] initWithAmount:1 currency:@"USD"];
+    
+    [wallet plus:[DTCMoney dollarWithAmount:1]];
+    
+    NSInteger numberOfDollars = wallet.countDollars;
+    
+    XCTAssertEqual(numberOfDollars, 2, @"$2");
+}
+
+
+
 @end

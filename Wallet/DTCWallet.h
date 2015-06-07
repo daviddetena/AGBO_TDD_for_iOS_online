@@ -11,4 +11,10 @@
 
 @interface DTCWallet : NSObject<DTCMoney>
 
+#pragma mark - Properties
+@property (nonatomic,readonly) NSUInteger countEuros;
+@property (nonatomic,readonly) NSUInteger countDollars;
+
+
+
 @end

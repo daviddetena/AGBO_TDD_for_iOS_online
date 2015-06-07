@@ -51,6 +51,14 @@
     return total;
 }
 
+// Take one object from another
+-(id<DTCMoney>) minus:(DTCMoney *) other{
+    NSInteger totalAmount = [self.amount integerValue] - [other.amount integerValue];
+    DTCMoney *total = [[DTCMoney alloc] initWithAmount:totalAmount currency:self.currency];
+    
+    return total;
+}
+
 
 -(id<DTCMoney>) reduceToCurrency:(NSString *) currency withBroker:(DTCBroker *) broker{
     DTCMoney *result;
