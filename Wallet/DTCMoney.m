@@ -36,14 +36,14 @@
     return self;
 }
 
--(id) times:(NSInteger) multiplier{
+-(id<DTCMoney>) times:(NSInteger) multiplier{
     DTCMoney *newMoney = [[DTCMoney alloc]
                           initWithAmount:[self.amount integerValue] * multiplier currency:self.currency];
     return newMoney;
 }
 
 // Add two objects
--(DTCMoney *) plus:(DTCMoney *) other{
+-(id<DTCMoney>) plus:(DTCMoney *) other{
     NSInteger totalAmount = [self.amount integerValue] + [other.amount integerValue];
     DTCMoney *total = [[DTCMoney alloc] initWithAmount:totalAmount
                                               currency:self.currency];

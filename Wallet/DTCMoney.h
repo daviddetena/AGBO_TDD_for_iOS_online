@@ -7,8 +7,26 @@
 //
 
 #import <Foundation/Foundation.h>
+@class DTCMoney;
 
-@interface DTCMoney : NSObject
+@protocol DTCMoney <NSObject>
+
+-(id) initWithAmount:(NSInteger) amount
+            currency:(NSString *) currency;
+
+// Replace DTCMoney * with id so the compiler
+// returns the proper type depending on the
+// class where this method is called
+// Returns an object that implements DTCMoney
+// protocol: DTCMoney, DTCWallet, etc.
+-(id<DTCMoney>) times:(NSInteger) multiplier;
+
+-(id<DTCMoney>) plus:(DTCMoney *) other;
+
+@end
+
+
+@interface DTCMoney : NSObject<DTCMoney>
 
 #pragma mark - Properties
 @property (nonatomic,strong,readonly) NSNumber *amount;
@@ -20,14 +38,5 @@
 +(id) euroWithAmount:(NSInteger) amount;
 +(id) dollarWithAmount:(NSInteger) amount;
 
--(id) initWithAmount:(NSInteger) amount
-            currency:(NSString *) currency;
-
-// Replace DTCMoney * with id so the compiler
-// returns the proper type depending on the
-// class where this method is called
--(id) times:(NSInteger) multiplier;
-
--(DTCMoney *) plus:(DTCMoney *) other;
 
 @end

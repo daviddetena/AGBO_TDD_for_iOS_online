@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-@class DTCMoney;
+#import "DTCMoney.h"
 
 @interface DTCBroker : NSObject
 
 #pragma mark - Methods
 
--(DTCMoney *) reduce:(DTCMoney *) money toCurrency:(NSString *) currency;
+-(id<DTCMoney>) reduce:(DTCMoney *) money toCurrency:(NSString *) currency;
 -(void) addRate:(NSInteger) rate
    fromCurrency:(NSString *) fromCurrency
      toCurrency:(NSString *) toCurrency;

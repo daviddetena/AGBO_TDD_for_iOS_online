@@ -33,7 +33,7 @@
 #pragma mark - Methods
 
 // Implement this method the easiest way to pass the test
--(DTCMoney *) reduce:(DTCMoney *) money
+-(id<DTCMoney>) reduce:(DTCMoney *) money
           toCurrency:(NSString *) currency{
 
     DTCMoney *result;

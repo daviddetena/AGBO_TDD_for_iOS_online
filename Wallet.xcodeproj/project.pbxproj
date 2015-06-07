@@ -18,6 +18,9 @@
 		59FD72201B24177D00770D89 /* DTCBrokerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FD721F1B24177D00770D89 /* DTCBrokerTests.m */; };
 		59FD72231B24190C00770D89 /* DTCBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FD72221B24190C00770D89 /* DTCBroker.m */; };
 		59FD72241B24190C00770D89 /* DTCBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FD72221B24190C00770D89 /* DTCBroker.m */; };
+		59FD72261B24361F00770D89 /* DTCWalletTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FD72251B24361F00770D89 /* DTCWalletTests.m */; };
+		59FD72291B2438D800770D89 /* DTCWallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FD72281B2438D800770D89 /* DTCWallet.m */; };
+		59FD722A1B2438D800770D89 /* DTCWallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FD72281B2438D800770D89 /* DTCWallet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		59FD721F1B24177D00770D89 /* DTCBrokerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTCBrokerTests.m; sourceTree = "<group>"; };
 		59FD72211B24190C00770D89 /* DTCBroker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTCBroker.h; sourceTree = "<group>"; };
 		59FD72221B24190C00770D89 /* DTCBroker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTCBroker.m; sourceTree = "<group>"; };
+		59FD72251B24361F00770D89 /* DTCWalletTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTCWalletTests.m; sourceTree = "<group>"; };
+		59FD72271B2438D800770D89 /* DTCWallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTCWallet.h; sourceTree = "<group>"; };
+		59FD72281B2438D800770D89 /* DTCWallet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTCWallet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +137,7 @@
 			children = (
 				59FA515F1B1FBF2900425B10 /* DTCMoneyTests.m */,
 				59FD721F1B24177D00770D89 /* DTCBrokerTests.m */,
+				59FD72251B24361F00770D89 /* DTCWalletTests.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -142,6 +149,8 @@
 				59FA51591B1FBA2100425B10 /* DTCMoney.m */,
 				59FD72211B24190C00770D89 /* DTCBroker.h */,
 				59FD72221B24190C00770D89 /* DTCBroker.m */,
+				59FD72271B2438D800770D89 /* DTCWallet.h */,
+				59FD72281B2438D800770D89 /* DTCWallet.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -254,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59FD72291B2438D800770D89 /* DTCWallet.m in Sources */,
 				59FA51301B1FA24E00425B10 /* AppDelegate.m in Sources */,
 				59FD72231B24190C00770D89 /* DTCBroker.m in Sources */,
 				59FA515A1B1FBA2100425B10 /* DTCMoney.m in Sources */,
@@ -266,6 +276,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59FD722A1B2438D800770D89 /* DTCWallet.m in Sources */,
+				59FD72261B24361F00770D89 /* DTCWalletTests.m in Sources */,
 				59FA51611B1FBFB100425B10 /* DTCMoney.m in Sources */,
 				59FA51601B1FBF2900425B10 /* DTCMoneyTests.m in Sources */,
 				59FD72241B24190C00770D89 /* DTCBroker.m in Sources */,
