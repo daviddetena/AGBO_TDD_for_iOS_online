@@ -97,8 +97,20 @@
                            [DTCMoney dollarWithAmount:10],@"$5 + $5 = $10");
 }
 
+// Check that the hash is the same that amount. (Now amount is a NSNumber and hash
+// is a NSUInteger)
+- (void) testThatHashIsAmount{
+    DTCMoney *one = [DTCMoney dollarWithAmount:1];
+    XCTAssertEqual([one hash], 1,@"The hash must be the same as the amount");
+}
 
-
+// We want that our DTCMoney description method has the template <DTCMoney: $1>
+- (void) testDescription{
+    DTCMoney *one = [DTCMoney dollarWithAmount:1];
+    NSString *desc = @"<DTCMoney: $1>";
+    
+    XCTAssertEqualObjects(desc, [one description],@"Description must match template");
+}
 
 
 
