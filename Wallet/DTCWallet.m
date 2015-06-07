@@ -9,18 +9,36 @@
 #import "DTCWallet.h"
 
 @interface DTCWallet()
-// Property to save all the moneys
+// Property to save all the moneys, dolars and euros
 @property (nonatomic,strong) NSMutableArray *moneys;
+
 @end
 
 @implementation DTCWallet
 
+
 #pragma mark - Getters
 
-// Returns the number of moneys in the wallet
--(NSUInteger) count{
-    return self.moneys.count;
+-(NSUInteger) countEuros{
+    NSMutableArray *euros = [NSMutableArray array];
+    for (DTCMoney *each in self.moneys) {
+        if ([each.currency isEqualToString:@"EUR"]) {
+            [euros addObject:each];
+        }
+    }
+    return euros.count;
 }
+
+-(NSUInteger) countDollars{
+    NSMutableArray *dollars = [NSMutableArray array];
+    for (DTCMoney *each in self.moneys) {
+        if ([each.currency isEqualToString:@"USD"]) {
+            [dollars addObject:each];
+        }
+    }
+    return dollars.count;
+}
+
 
 
 #pragma mark - DTCMoney protocol
@@ -38,9 +56,16 @@
     return self;
 }
 
+
 // Returns self with the addition
 -(id<DTCMoney>) plus:(DTCMoney *)other{
     [_moneys addObject:other];
+    
+    return self;
+}
+
+-(id<DTCMoney>) minus:(DTCMoney *)other{
+    [_moneys removeObject:other];
     
     return self;
 }
@@ -66,10 +91,12 @@
     
     // Add to the result the amount of each money in the array reduced to the given currency
     for (DTCMoney *each in self.moneys) {
-        result = [result plus:[each reduceToCurrency:currency withBroker:broker]];
+        result = [result plus:[each reduceToCurrency:currency
+                                          withBroker:broker]];
     }
     
     return result;
 }
+
 
 @end

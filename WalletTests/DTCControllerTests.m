@@ -8,14 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-#import "DTCViewController.h"
 #import "DTCWallet.h"
 #import "DTCWalletTableViewController.h"
 
 @interface DTCControllerTests : XCTestCase
-@property (nonatomic,strong) DTCViewController *viewController;
-@property (nonatomic,strong) UIButton *button;
-@property (nonatomic,strong) UILabel *label;
 
 @property (nonatomic,strong) DTCWalletTableViewController *walletVC;
 @property (nonatomic,strong) DTCWallet *wallet;
@@ -26,14 +22,6 @@
 - (void)setUp {
     [super setUp];
     // Set up lab environment
-    self.viewController = [[DTCViewController alloc] initWithNibName:nil bundle:nil];
-    self.button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [self.button setTitle:@"Hello!" forState:UIControlStateNormal];
-    self.label = [[UILabel alloc] initWithFrame:CGRectZero];
-
-    // Asign who the label is
-    self.viewController.displayLabel = self.label;
-    
     self.wallet = [[DTCWallet alloc] initWithAmount:1 currency:@"USD"];
     [self.wallet plus:[DTCMoney euroWithAmount:1]];
     self.walletVC = [[DTCWalletTableViewController alloc] initWithModel:self.wallet];
@@ -42,34 +30,28 @@
 - (void)tearDown {
     // Tear down lab environment
     [super tearDown];
-    self.viewController = nil;
-    self.button = nil;
-    self.label = nil;
+    self.walletVC = nil;
+    self.wallet = nil;
 }
 
-- (void) testThatTextOnLabelIsEqualToTextOnButton{
-    
-    // Send the message. Action: displayText; sender:button
-    [self.viewController displayText:self.button];
-    
-    // Check that the label and the button have the same text
-    XCTAssertEqualObjects(self.button.titleLabel.text, self.label.text,@"Button and label should have the same text");
-}
 
 
 // Test sections and rows
-- (void) testThatTableHasOneSection{
+- (void) testThatNumberOfSectionsIsNumberOfCurrenciesPlusOne{
     
     NSUInteger sections = [self.walletVC numberOfSectionsInTableView:nil];
 
     // Number of elements per section
-    XCTAssertEqual(sections, 1, @"There can only be one section!");
+    XCTAssertEqual(sections, 3, @"The number of sections must be the number of currencies plus 1 (the total)");
 }
 
-- (void) testThatNumberOfCellsIsNumberOfMoneyPlusOne{
-    XCTAssertEqual(self.wallet.count + 1,
-                   [self.walletVC tableView:nil numberOfRowsInSection:0],
-                   @"The number of cells must be the number of moneys plus 1 (the total)");
+- (void) testThatNumberOfCellsPerSectionIsNumberOfMoneysPlusOne{
+    
+    XCTAssertEqual(self.wallet.countEuros +1, [self.walletVC tableView:nil numberOfRowsInSection:0], @"Number of cells of Euros is the number of Euro moneys");
+    
+    XCTAssertEqual(self.wallet.countDollars +1, [self.walletVC tableView:nil numberOfRowsInSection:1], @"Number of cells of Dollars is the number of Dollar moneys");
+    
+    XCTAssertEqual(1, [self.walletVC tableView:nil numberOfRowsInSection:2], @"Number of cells for Total is one");
 }
 
 

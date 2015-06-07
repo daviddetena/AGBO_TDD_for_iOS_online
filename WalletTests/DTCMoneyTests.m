@@ -97,6 +97,16 @@
                            [DTCMoney dollarWithAmount:10],@"$5 + $5 = $10");
 }
 
+
+// Simple test of substraction
+-(void) testSimpleSubstraction{
+    XCTAssertEqualObjects([[DTCMoney dollarWithAmount:5] minus:
+                           [DTCMoney dollarWithAmount:5]],
+                          [DTCMoney dollarWithAmount:0], @"$5 - $5 = $0");
+}
+
+
+
 // Check that the hash is the same that amount. (Now amount is a NSNumber and hash
 // is a NSUInteger)
 - (void) testThatHashIsAmount{

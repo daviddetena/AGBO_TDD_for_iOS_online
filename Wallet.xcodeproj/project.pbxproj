@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		594BF3101B24557000E2CFD7 /* DTCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 594BF30E1B24557000E2CFD7 /* DTCViewController.m */; };
-		594BF3111B24557000E2CFD7 /* DTCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 594BF30E1B24557000E2CFD7 /* DTCViewController.m */; };
-		594BF3121B24557000E2CFD7 /* DTCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 594BF30F1B24557000E2CFD7 /* DTCViewController.xib */; };
-		594BF3131B24557000E2CFD7 /* DTCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 594BF30F1B24557000E2CFD7 /* DTCViewController.xib */; };
 		594BF3161B24559600E2CFD7 /* DTCControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 594BF3151B24559600E2CFD7 /* DTCControllerTests.m */; };
 		59EA268E1B245FD2003C0FC5 /* DTCWalletTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59EA268D1B245FD2003C0FC5 /* DTCWalletTableViewController.m */; };
 		59EA268F1B245FD2003C0FC5 /* DTCWalletTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59EA268D1B245FD2003C0FC5 /* DTCWalletTableViewController.m */; };
@@ -41,9 +37,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		594BF30D1B24557000E2CFD7 /* DTCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTCViewController.h; sourceTree = "<group>"; };
-		594BF30E1B24557000E2CFD7 /* DTCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTCViewController.m; sourceTree = "<group>"; };
-		594BF30F1B24557000E2CFD7 /* DTCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DTCViewController.xib; sourceTree = "<group>"; };
 		594BF3151B24559600E2CFD7 /* DTCControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTCControllerTests.m; sourceTree = "<group>"; };
 		59EA268C1B245FD2003C0FC5 /* DTCWalletTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTCWalletTableViewController.h; sourceTree = "<group>"; };
 		59EA268D1B245FD2003C0FC5 /* DTCWalletTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTCWalletTableViewController.m; sourceTree = "<group>"; };
@@ -90,9 +83,6 @@
 		594BF30C1B24554B00E2CFD7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				594BF30D1B24557000E2CFD7 /* DTCViewController.h */,
-				594BF30E1B24557000E2CFD7 /* DTCViewController.m */,
-				594BF30F1B24557000E2CFD7 /* DTCViewController.xib */,
 				59EA268C1B245FD2003C0FC5 /* DTCWalletTableViewController.h */,
 				59EA268D1B245FD2003C0FC5 /* DTCWalletTableViewController.m */,
 			);
@@ -279,7 +269,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				594BF3121B24557000E2CFD7 /* DTCViewController.xib in Resources */,
 				59FA51351B1FA24E00425B10 /* LaunchScreen.xib in Resources */,
 				59FA51321B1FA24E00425B10 /* Images.xcassets in Resources */,
 			);
@@ -289,7 +278,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				594BF3131B24557000E2CFD7 /* DTCViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,7 +289,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				59FD72291B2438D800770D89 /* DTCWallet.m in Sources */,
-				594BF3101B24557000E2CFD7 /* DTCViewController.m in Sources */,
 				59FA51301B1FA24E00425B10 /* AppDelegate.m in Sources */,
 				59FD72231B24190C00770D89 /* DTCBroker.m in Sources */,
 				59EA268E1B245FD2003C0FC5 /* DTCWalletTableViewController.m in Sources */,
@@ -318,7 +305,6 @@
 				59FD722A1B2438D800770D89 /* DTCWallet.m in Sources */,
 				594BF3161B24559600E2CFD7 /* DTCControllerTests.m in Sources */,
 				59EA268F1B245FD2003C0FC5 /* DTCWalletTableViewController.m in Sources */,
-				594BF3111B24557000E2CFD7 /* DTCViewController.m in Sources */,
 				59FD72261B24361F00770D89 /* DTCWalletTests.m in Sources */,
 				59FA51611B1FBFB100425B10 /* DTCMoney.m in Sources */,
 				59FA51601B1FBF2900425B10 /* DTCMoneyTests.m in Sources */,
