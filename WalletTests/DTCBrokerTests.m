@@ -28,8 +28,7 @@
 }
 
 
-// Test de reducción. Hacemos que $10 sean iguales a €5, con una tasa de
-// reducción 2 a 1. (carta a reyes magos)
+// Test de reducción
 - (void) testSimpleReduction{
     
     DTCBroker *broker = [[DTCBroker alloc] init];
@@ -40,6 +39,23 @@
     
     // Check that a reduction of an amount in a currency is the same amount in that currency
     XCTAssertEqualObjects(sum, reduced, @"Conversion to same currency should be a NOP");
+}
+
+// Queremos $10 == €5, 2:1
+- (void) testReduction{
+    
+    DTCBroker *broker = [[DTCBroker alloc] init];
+    
+    // We want broker to have a rate method from one currency to another
+    [broker addRate: 2 fromCurrency:@"USD" toCurrency:@"EUR"];
+    
+    DTCMoney *dollars = [DTCMoney dollarWithAmount:10];
+    DTCMoney *euros = [DTCMoney euroWithAmount:5];
+    
+    // Reduce dollars to euros
+    DTCMoney *converted = [broker reduce:dollars toCurrency:@"EUR"];
+    XCTAssertEqualObjects(converted, euros,@"$10 should be €5, rate 2:1");
+    
 }
 
 @end
