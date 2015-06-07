@@ -15,6 +15,9 @@
 		59FA515E1B1FBC7000425B10 /* NSObject+GNUStepAddons.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FA515D1B1FBC7000425B10 /* NSObject+GNUStepAddons.m */; };
 		59FA51601B1FBF2900425B10 /* DTCMoneyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FA515F1B1FBF2900425B10 /* DTCMoneyTests.m */; };
 		59FA51611B1FBFB100425B10 /* DTCMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FA51591B1FBA2100425B10 /* DTCMoney.m */; };
+		59FD72201B24177D00770D89 /* DTCBrokerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FD721F1B24177D00770D89 /* DTCBrokerTests.m */; };
+		59FD72231B24190C00770D89 /* DTCBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FD72221B24190C00770D89 /* DTCBroker.m */; };
+		59FD72241B24190C00770D89 /* DTCBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FD72221B24190C00770D89 /* DTCBroker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,9 @@
 		59FA515C1B1FBC7000425B10 /* NSObject+GNUStepAddons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GNUStepAddons.h"; sourceTree = "<group>"; };
 		59FA515D1B1FBC7000425B10 /* NSObject+GNUStepAddons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GNUStepAddons.m"; sourceTree = "<group>"; };
 		59FA515F1B1FBF2900425B10 /* DTCMoneyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTCMoneyTests.m; sourceTree = "<group>"; };
+		59FD721F1B24177D00770D89 /* DTCBrokerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTCBrokerTests.m; sourceTree = "<group>"; };
+		59FD72211B24190C00770D89 /* DTCBroker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTCBroker.h; sourceTree = "<group>"; };
+		59FD72221B24190C00770D89 /* DTCBroker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTCBroker.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				59FA515F1B1FBF2900425B10 /* DTCMoneyTests.m */,
+				59FD721F1B24177D00770D89 /* DTCBrokerTests.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -133,6 +140,8 @@
 			children = (
 				59FA51581B1FBA2100425B10 /* DTCMoney.h */,
 				59FA51591B1FBA2100425B10 /* DTCMoney.m */,
+				59FD72211B24190C00770D89 /* DTCBroker.h */,
+				59FD72221B24190C00770D89 /* DTCBroker.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -246,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				59FA51301B1FA24E00425B10 /* AppDelegate.m in Sources */,
+				59FD72231B24190C00770D89 /* DTCBroker.m in Sources */,
 				59FA515A1B1FBA2100425B10 /* DTCMoney.m in Sources */,
 				59FA515E1B1FBC7000425B10 /* NSObject+GNUStepAddons.m in Sources */,
 				59FA512D1B1FA24E00425B10 /* main.m in Sources */,
@@ -258,6 +268,8 @@
 			files = (
 				59FA51611B1FBFB100425B10 /* DTCMoney.m in Sources */,
 				59FA51601B1FBF2900425B10 /* DTCMoneyTests.m in Sources */,
+				59FD72241B24190C00770D89 /* DTCBroker.m in Sources */,
+				59FD72201B24177D00770D89 /* DTCBrokerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
