@@ -11,11 +11,19 @@
 
 @interface DTCBroker : NSObject
 
+#pragma mark - Properties
+
+// We need a set of rates that we'll add to a dictionary
+@property (nonatomic,strong) NSMutableDictionary *rates;
+
+
 #pragma mark - Methods
 
--(id<DTCMoney>) reduce:(DTCMoney *) money toCurrency:(NSString *) currency;
+-(DTCMoney *) reduce:(id<DTCMoney>) money toCurrency:(NSString *) currency;
 -(void) addRate:(NSInteger) rate
    fromCurrency:(NSString *) fromCurrency
      toCurrency:(NSString *) toCurrency;
+- (NSString *) keyFromCurrency:(NSString *) fromCurrency
+                    toCurrency:(NSString *) toCurrency;
 
 @end

@@ -9,12 +9,6 @@
 #import "DTCBroker.h"
 #import "DTCMoney.h"
 
-@interface DTCBroker()
-
-// We need a set of rates that we'll add to a dictionary
-@property (nonatomic,strong) NSMutableDictionary *rates;
-
-@end
 
 @implementation DTCBroker
 
@@ -33,30 +27,12 @@
 #pragma mark - Methods
 
 // Implement this method the easiest way to pass the test
--(id<DTCMoney>) reduce:(DTCMoney *) money
+-(DTCMoney *) reduce:(id<DTCMoney>) money
           toCurrency:(NSString *) currency{
 
-    DTCMoney *result;
-    double rate = [[self.rates
-                       objectForKey:[self keyFromCurrency:money.currency
-                                                          toCurrency:currency]] doubleValue];
-    
-    // Check that fromCurrency and toCurrency are the same
-    if([money.currency isEqual:currency]){
-        result = money;
-    }
-    else if(rate == 0){
-        // NO rate found, exception raises
-        [NSException raise:@"NoConversionRateException"
-                    format:@"Must have a conversion from %@ to %@", money.currency, currency];
-    }else{
-        // We have rate
-        NSInteger newAmount = [money.amount integerValue] * rate;
-        result = [[DTCMoney alloc] initWithAmount:newAmount
-                                         currency:currency];
-    }
-
-    return result;
+    // Double dispatch, le devolvemos la pregunta
+    return [money reduceToCurrency:currency
+                        withBroker:self];
 }
 
 -(void) addRate:(NSInteger) rate
@@ -67,7 +43,7 @@
     [self.rates setObject:@(rate) forKey:[self keyFromCurrency:fromCurrency
                                                     toCurrency:toCurrency]];
     
-    // Save the two rates
+    // Save the rate and its inverse
     [self.rates setObject:@(1.0/rate) forKey:[self keyFromCurrency:toCurrency
                                                     toCurrency:fromCurrency]];
     

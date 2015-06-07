@@ -29,20 +29,20 @@
 }
 
 // €40 + $20 = $100, 2:1
-//- (void) testAdditionWithReduction{
-//    
-//    DTCBroker *broker = [DTCBroker new];
-//    [broker addRate:2 fromCurrency:@"USD" toCurrency:@"EUR"];
-//    
-//    // €40
-//    DTCWallet *wallet = [[DTCWallet alloc] initWithAmount:40 currency:@"EUR"];
-//    // €40 + $20
-//    [wallet plus: [DTCMoney dollarWithAmount:20]];
-//    
-//    // Check that €40 => $80
-//    DTCMoney *reduced = [broker reduce:wallet toCurrency:@"USD"];
-//    
-//    XCTAssertEqualObjects(reduced, [DTCMoney dollarWithAmount:100],@"€40 + $20 = $100, rate 2:1");
-//}
+- (void) testAdditionWithReduction{
+    
+    DTCBroker *broker = [DTCBroker new];
+    [broker addRate:2 fromCurrency:@"EUR" toCurrency:@"USD"];
+    
+    // €40
+    DTCWallet *wallet = [[DTCWallet alloc] initWithAmount:40 currency:@"EUR"];
+    // €40 + $20
+    [wallet plus: [DTCMoney dollarWithAmount:20]];
+    
+    // Check that €40 => $80
+    DTCMoney *reduced = [broker reduce:wallet toCurrency:@"USD"];
+    
+    XCTAssertEqualObjects(reduced, [DTCMoney dollarWithAmount:100],@"€40 + $20 = $100, rate 2:1");
+}
 
 @end

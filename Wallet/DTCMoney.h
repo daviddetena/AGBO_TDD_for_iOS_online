@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 @class DTCMoney;
+@class DTCBroker;
 
 @protocol DTCMoney <NSObject>
 
@@ -22,6 +23,8 @@
 -(id<DTCMoney>) times:(NSInteger) multiplier;
 
 -(id<DTCMoney>) plus:(DTCMoney *) other;
+
+-(id<DTCMoney>) reduceToCurrency:(NSString *) currency withBroker:(DTCBroker *) broker;
 
 @end
 

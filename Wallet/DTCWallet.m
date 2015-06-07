@@ -50,4 +50,19 @@
     return self;
 }
 
+// Reduce each element in the array of moneys to the given currency
+-(id<DTCMoney>) reduceToCurrency:(NSString *)currency
+                      withBroker:(DTCBroker *)broker{
+
+    // Init with 0 (default) in the given currency
+    DTCMoney *result = [[DTCMoney alloc] initWithAmount:0 currency:currency];
+    
+    // Add to the result the amount of each money in the array reduced to the given currency
+    for (DTCMoney *each in self.moneys) {
+        result = [result plus:[each reduceToCurrency:currency withBroker:broker]];
+    }
+    
+    return result;
+}
+
 @end

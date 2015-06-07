@@ -9,6 +9,7 @@
 
 #import "DTCMoney.h"
 #import "NSObject+GNUStepAddons.h"
+#import "DTCBroker.h"
 
 @interface DTCMoney()
 @property (nonatomic,strong) NSNumber *amount;
@@ -26,7 +27,7 @@
 }
 
 
-#pragma mark - Init
+#pragma mark - DTCMoney protocol
 -(id) initWithAmount:(NSInteger) amount
             currency:(NSString *) currency{
     if(self = [super init]){
@@ -48,6 +49,31 @@
     DTCMoney *total = [[DTCMoney alloc] initWithAmount:totalAmount
                                               currency:self.currency];
     return total;
+}
+
+
+-(id<DTCMoney>) reduceToCurrency:(NSString *) currency withBroker:(DTCBroker *) broker{
+    DTCMoney *result;
+    double rate = [[broker.rates
+                    objectForKey:[broker keyFromCurrency:self.currency
+                                            toCurrency:currency]] doubleValue];
+    
+    // Check that fromCurrency and toCurrency are the same
+    if([self.currency isEqual:currency]){
+        result = self;
+    }
+    else if(rate == 0){
+        // NO rate found, exception raises
+        [NSException raise:@"NoConversionRateException"
+                    format:@"Must have a conversion from %@ to %@", self.currency, currency];
+    }else{
+        // We have rate
+        NSInteger newAmount = [self.amount integerValue] * rate;
+        result = [[DTCMoney alloc] initWithAmount:newAmount
+                                         currency:currency];
+    }
+    
+    return result;
 }
 
 
@@ -77,5 +103,7 @@
 -(NSUInteger) hash{
     return [self.amount integerValue];
 }
+
+
 
 @end
