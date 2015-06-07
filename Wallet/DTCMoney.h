@@ -11,6 +11,7 @@
 @interface DTCMoney : NSObject
 
 #pragma mark - Properties
+@property (nonatomic,strong,readonly) NSNumber *amount;
 @property (nonatomic,readonly) NSString *currency;
 
 #pragma mark - Factory methods

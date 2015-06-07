@@ -36,7 +36,27 @@
 -(DTCMoney *) reduce:(DTCMoney *) money
           toCurrency:(NSString *) currency{
 
-    return money;
+    DTCMoney *result;
+    double rate = [[self.rates
+                       objectForKey:[self keyFromCurrency:money.currency
+                                                          toCurrency:currency]] doubleValue];
+    
+    // Check that fromCurrency and toCurrency are the same
+    if([money.currency isEqual:currency]){
+        result = money;
+    }
+    else if(rate == 0){
+        // NO rate found, exception raises
+        [NSException raise:@"NoConversionRateException"
+                    format:@"Must have a conversion from %@ to %@", money.currency, currency];
+    }else{
+        // We have rate
+        NSInteger newAmount = [money.amount integerValue] * rate;
+        result = [[DTCMoney alloc] initWithAmount:newAmount
+                                         currency:currency];
+    }
+
+    return result;
 }
 
 -(void) addRate:(NSInteger) rate
@@ -46,6 +66,11 @@
     // Add a rate to dictionary. Use a custom method to get the proper key
     [self.rates setObject:@(rate) forKey:[self keyFromCurrency:fromCurrency
                                                     toCurrency:toCurrency]];
+    
+    // Save the two rates
+    [self.rates setObject:@(1.0/rate) forKey:[self keyFromCurrency:toCurrency
+                                                    toCurrency:fromCurrency]];
+    
 }
 
 #pragma mark - Utils

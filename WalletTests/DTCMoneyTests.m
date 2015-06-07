@@ -107,7 +107,7 @@
 // We want that our DTCMoney description method has the template <DTCMoney: $1>
 - (void) testDescription{
     DTCMoney *one = [DTCMoney dollarWithAmount:1];
-    NSString *desc = @"<DTCMoney: $1>";
+    NSString *desc = @"<DTCMoney: USD 1>";
     
     XCTAssertEqualObjects(desc, [one description],@"Description must match template");
 }

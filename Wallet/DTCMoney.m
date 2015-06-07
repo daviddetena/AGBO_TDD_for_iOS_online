@@ -54,10 +54,10 @@
 
 #pragma mark - Overwritten
 /*
-    Incluimos el nombre de la clase y el valor de account en el description
+    Queremos algo como <DTCMoney: $1>
  */
 -(NSString *) description{
-    return [NSString stringWithFormat:@"<%@ %ld>",[self class], (long)[self amount]];
+    return [NSString stringWithFormat:@"<%@: %@ %@>",[self class], self.currency, self.amount];
 }
 
 
@@ -73,10 +73,9 @@
     }
 }
 
-// Hash: inherited from NSObject simply returns the object's memory address
-// as a number
+// Hash: returns the amount as the hash
 -(NSUInteger) hash{
-    return (NSUInteger)self.amount;
+    return [self.amount integerValue];
 }
 
 @end
